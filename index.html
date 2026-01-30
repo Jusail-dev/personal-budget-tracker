@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalBudjetTracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <H1>Budget Tracker</H1>
+    </header>
+    <div class="container">
+        <div class="main-container">
+
+            <div class="income-expense-balance">
+                <div class="total-income">
+                    <div class="left-sec">
+                        <p class="titlee">Total Income</p>
+                        <p style="color: hsl(142.13deg 76.22% 36.27%); font-weight: bold;">$<span id="income">999</span>
+                        </p>
+
+                    </div>
+                    <div class="right-sec" style="background: hsl(140.63deg 84.21% 92.55%);">
+                        <i style="color: hsl(142.13deg 76.22% 36.27%);" class="fas fa-arrow-up"></i>
+                    </div>
+                </div>
+                <div class="total-expense">
+                    <div class="left-sec">
+                        <p class="titlee">Total Expense</p>
+                        <p style="color: hsl(0deg 72.5% 52.94%); font-weight: bold;">$<span id="expense">999</span></p>
+
+                    </div>
+                    <div class="right-sec" style="background: hsl(0deg 93.33% 94.12%);">
+                        <i style="color: hsl(0deg 72.5% 52.94%);" class="fas fa-arrow-down"></i>
+                    </div>
+                </div>
+                <div class="balance">
+                    <div class="left-sec">
+                        <p class="titlee">Balance</p>
+                        <p style="color: hsl(221.21deg 83.19% 53.33%); font-weight: bold;">$<span
+                                id="balance">999</span></p>
+
+                    </div>
+                    <div class="right-sec" style="background: hsl(214.29deg 94.59% 92.75%);">
+                        <p style="font-weight: bold; color: hsl(221.21deg 83.19% 53.33%);">$</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add-transaction">
+                <p class="title">Add New Transaction</p>
+                <div class="amount">
+                    <p>Amount</p>
+                    <input type="number" id="amount_inp">
+                </div>
+                <div class="date">
+                    <p>Date</p>
+                    <input type="date" id="date_inp">
+                </div>
+                <div class="type">
+                    <p>Type</p>
+                    <div class="inc-exp-chbox">
+                        <div class="income">
+                            <input type="radio" name="type" value="Income">
+                            <p>Income</p>
+                        </div>
+                        <div class="expense">
+                            <input type="radio" name="type" value="Expense">
+                            <p>Expense</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="addTransBtn">Add Transaction</button>
+            </div>
+        </div>
+        <div class="imp-exp-prnt">
+            <div class="imp-exp">
+                <button style="background-color: green;" id="import-file" type="button">Import JSON</button>
+                <button style="background-color: blue;" onclick="exportData()">Export JSON</button>
+            </div>
+        </div>
+
+        <div class="transaction-history">
+            <div class="trans-table">
+                <table>
+                    <caption>Transaction History</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablebody">
+                        <tr>
+                            <td data-label="Date">2025-09-27</td>
+                            <td data-label="Amount">$100.00</td>
+                            <td data-label="Type">Income</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">2025-09-27</td>
+                            <td data-label="Amount">$100.00</td>
+                            <td data-label="Type">Income</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">2025-09-27</td>
+                            <td data-label="Amount">$100.00</td>
+                            <td data-label="Type">Income</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

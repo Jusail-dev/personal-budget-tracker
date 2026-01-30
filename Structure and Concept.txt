@@ -1,0 +1,96 @@
+📦 Project: Personal Budget Tracker (with JSON)
+🔧 Features:
+Feature	Description
+✅ Add Income/Expense	Enter amount, category, type, date
+✅ JSON data format	Entries stored and read from JSON/localStorage
+✅ Filter by category/date	See totals per week/month
+✅ Balance calculation	Total income, expenses, and remaining budget
+✅ Export/Import JSON	Backup your data manually
+✅ [Optional] Charts	Show pie/bar charts with Chart.js
+
+
+budget-tracker/
+│
+├── index.html
+├── style.css
+├── script.js
+├── data.json        <-- Optional: Initial dummy data
+
+Sample Budget Data
+
+[
+  {
+    "type": "income",
+    "category": "Salary",
+    "amount": 3200,
+    "date": "2025-09-01"
+  },
+  {
+    "type": "income",
+    "category": "Freelance",
+    "amount": 600,
+    "date": "2025-09-10"
+  },
+  {
+    "type": "expense",
+    "category": "Rent",
+    "amount": 1200,
+    "date": "2025-09-03"
+  },
+  {
+    "type": "expense",
+    "category": "Groceries",
+    "amount": 320,
+    "date": "2025-09-06"
+  },
+  {
+    "type": "expense",
+    "category": "Utilities",
+    "amount": 150,
+    "date": "2025-09-08"
+  },
+  {
+    "type": "expense",
+    "category": "Transport",
+    "amount": 80,
+    "date": "2025-09-09"
+  },
+  {
+    "
+
+
+
+
+
+🧠 Advanced Ideas (when you're ready):
+
+Add Chart.js integration to visualize monthly expenses
+
+Create a date filter (e.g., “This Month”, “Last 30 days”)
+
+Add authentication (mock or Firebase) to sync across devices
+
+Store data on a Node.js server and fetch via API
+
+
+
+
+
+
+"Create a personal budget tracker dashboard for desktop and mobile. The UI should include:
+
+A clean header with the title 'Budget Tracker'
+
+A form to add new transactions with fields: Category, Amount, Date, and Type (Income or Expense)
+
+A summary section showing Total Income, Total Expenses, and Balance
+
+A transaction history list showing each transaction with date, category, amount, and type
+
+Buttons for exporting and importing JSON files
+
+Use modern flat design with clear color distinction between income (green) and expenses (red)
+
+Responsive layout for mobile and desktop
+
+Optional: Add a simple chart or graph placeholder for future data visualization"

@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: hsl(210deg 20% 98.04%);
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+header {
+    background-color: white;
+    font-size: x-small;
+    font-weight: bolder;
+    border-bottom: 1px solid hsl(0, 0%, 91%);
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 20px;
+    padding-bottom: 7px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.main-container {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-transaction {
+    width: 380px;
+    height: auto;
+    background: rgb(255, 255, 255)   ;
+    border: 1px solid hsl(0, 0%, 91%);
+    border-radius: 4px;
+    /* padding: 15px; */
+    border: 1px solid hsl(0, 0%, 91%);
+    border-radius: 4px;
+}
+.title {
+    font-size: 14px !important;
+    color: black !important;
+    padding: 15px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+.add-transaction p {
+    font-size: 12px;
+    color: gray;
+}
+.add-transaction input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid hsl(0, 0%, 91%);
+    border-radius: 4px;
+
+}
+.inc-exp-chbox {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+}
+.income, .expense {
+    width: 47%;
+    height: auto;
+    border: 1px solid hsl(0, 0%, 91%);
+    color: gray;
+    display: flex;
+    align-items: center;
+}
+.inc-exp-chbox input {
+    width: 13px;
+    height: auto;
+    border: 1px solid hsl(0, 0%, 91%);
+    color: gray;
+}
+.inc-exp-chbox p{
+    margin-left: 10px;
+
+}
+
+.add-transaction button {
+    width: 95%;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: blue;
+    margin: 10px;
+    margin-top: 20px;
+}
+.amount, .date, .type {
+    padding: 10px;
+}
+
+
+
+
+.income-expense-balance {
+    width: 380px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.total-income, .total-expense, .balance {
+    width: 200px;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 6px;
+    padding-left: 6px;
+    border: 1px solid hsl(0, 0%, 91%);
+    border-radius: 4px;
+}
+.total-income .right-sec, .total-expense .right-sec, .balance .right-sec {
+    background-color: blue;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.income-expense-balance .titlee {
+    font-size: 12px ;
+    color:grey;
+}
+.imp-exp-prnt {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+.imp-exp {
+    width: 100%;
+    height: 30px;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.imp-exp button {
+    width: 49%;
+    height: 100%;
+    color: white;
+    border: 1px solid hsl(0, 0%, 91%);
+    border-radius: 4px;
+}
+
+
+
+.transaction-history {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+.trans-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.trans-table th,
+.trans-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+.trans-table th {
+    background-color: hsl(210deg 20% 98.04%);
+    font-weight: 300;
+    color: grey;
+}
+.trans-table caption {
+    caption-side: top;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: #fff;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: left;
+}
+
+@media (max-width: 500px) {
+    .trans-table table,
+    .trans-table thead,
+    .trans-table tbody,
+    .trans-table th,
+    .trans-table td,
+    .trans-table tr {
+        display: block;
+        width: 100%;
+    }
+    .trans-table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+    .trans-table thead {
+        display: none;
+    }
+
+    .trans-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background: #fafafa;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .trans-table td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+        word-wrap: break-word;
+        white-space: normal;
+        min-height: 45px; 
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .trans-table td::before {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        content: attr(data-label);
+        left: 10px;
+        text-align: left;
+        width: 40%;
+    }
+    .trans-table caption {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: bold;
+    text-align: left;
+    box-sizing: border-box;
+    text-align: center;
+    }
+    .main-container {
+        flex-direction: column;
+    }
+    .income-expense-balance {
+        align-items: center;
+        flex-direction: row;
+        height: fit-content;
+        width: 100%;
+        max-width: 380px;
+    }
+    .add-transaction {
+        max-width: 100%;
+        margin-top: 5px;
+    }
+    .imp-exp-prnt {
+        padding: 0;
+        padding-top: 5px;
+
+    }
+    .imp-exp {
+        max-width: 380px;
+        flex-direction: column;
+        height: auto;
+    }
+    .imp-exp button {
+        width: 100%;    
+        height: 30px;
+    }
+}
